@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Valentines Mi Amor</title>
+    <link rel="icon" type="image/png" href="img/icons8-favorite-16.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js”></script>
+  </head>
+  <body>
+    <div class="center">
+      <h1 class="center-text">You make me burst with joy</h1>
+      <div id="container" class="center" style="cursor: pointer; width: 50%;"></div>
+      <img id="coupon" class="center" src="img/present.png" style="height: 200px; width: 200px; display: none;" />
+      <div id="final-value">
+        <p>Hit the pinata to win!!</p>
+      </div>
+      <a id="next" href="wheel.html" style="width: 100%">
+        <p class="center center-text">[ next ]</p>
+      </a>
+    </div>
+    <script type="module">
+        import lottie from "https://cdn.skypack.dev/lottie-web@5.7.14";
+
+        let container = document.getElementById("container");
+        let animation;
+        let animationCompleted = true;
+        let hitCount = 0;
+        let breakPoint = 4;
+
+        let sayings = ["And again!", "Hit harder!", "Ooh, yes daddy harder", "I'm coming close", ""]
+
+        animation = lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: 'https://assets7.lottiefiles.com/packages/lf20_icuqodkg.json'
+        });
+
+        animation.addEventListener("complete", () => {
+            animationCompleted = true;
+        });
+
+        container.addEventListener("click", () => {
+            if (animationCompleted) {
+                animation.setSpeed(1.5);
+                animation.playSegments([3,55], false)   
+                animationCompleted = false;
+                document.getElementById("final-value").innerHTML = sayings[hitCount];
+                if(hitCount==breakPoint){
+                    console.log("break!");
+                    setTimeout(function() {
+                        animation.destroy();
+                        lottie.loadAnimation({
+                            container: container,
+                            renderer: 'svg',
+                            loop: false,
+                            autoplay: true,
+                            path: 'https://assets8.lottiefiles.com/private_files/lf30_f495l0im.json'
+                        })
+                        
+
+                    }, 600);
+                    setTimeout(function() {
+                        document.getElementById("final-value").innerHTML = "Congrats, you have won a SUPRISE GIFT!";
+                        document.getElementById("next").style.visibility = "visible";
+                        document.getElementById("coupon").style.display = "block";
+                        document.getElementById("container").style.display = "none";
+                      }, 2500);
+                } else {
+                    hitCount++;
+                }
+            }
+        });
+    </script>
+  </body>
+</html>

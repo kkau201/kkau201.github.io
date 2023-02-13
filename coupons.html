@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Valentines Mi Amor</title>
+    <link rel="icon" type="image/png" href="img/icons8-favorite-16.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1 class="center-text">Your Coupons</h1>
+    <p class="center-text" style="padding-bottom: 50px">
+      I hope you enjoyed the mini games!<br />
+      Screenshot this page to redeem the coupons when I see you next xx
+    </p>
+    <!-- Coupon 1 -->
+    <div id="coupon-container" class="center">
+      <div class="card">
+        <div id="coupon-one" class="main">
+          <div class="co-img">
+            <img
+              src="img/teddy-bear.png"
+              style="
+                height: 60px;
+                width: 60px;
+                padding: 10px;
+                margin-left: 10px;
+              "
+            />
+          </div>
+          <div class="vertical"></div>
+          <div class="content">
+            <h2>GOOD FOR ONE</h2>
+            <h1 class="center-text">Cuddle Session</h1>
+            <p>Valid till 14 February 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div id="coupon-two" class="main">
+          <div class="co-img">
+            <img src="img/present.png" style="height: 100px; width: 100px" />
+          </div>
+          <div class="vertical"></div>
+          <div class="content">
+            <h2>GOOD FOR ONE</h2>
+            <h1 class="center-text">Secret Prize</h1>
+            <p>Valid till 14 February 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div id="coupon-three" class="main">
+          <div class="co-img">
+            <img
+              src="img/mugs.png"
+              style="height: 75px; width: 75px; padding: 10px; margin-left: 5px"
+            />
+          </div>
+          <div class="vertical"></div>
+          <div class="content">
+            <h2>GOOD FOR ONE</h2>
+            <h1 class="center-text">Breakfast in Bed</h1>
+            <p>Valid till 14 February 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div id="coupon-four" class="main">
+          <div class="co-img">
+            <img src="img/glasses.png" style="height: 100px; width: 100px" />
+          </div>
+          <div class="vertical"></div>
+          <div class="content">
+            <h2>GOOD FOR ONE</h2>
+            <h1 id="lotto-coupon" class="center-text">Date Night</h1>
+            <p>Valid till 14 February 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const urlString = window.location.search;
+      let paramString = urlString.split("?")[1];
+      let queryString = new URLSearchParams(paramString);
+      let lottoCoupon = document.getElementById("lotto-coupon");
+
+      for (let pair of queryString.entries()) {
+        console.log("Key is: " + pair[0]);
+        console.log("Value is: " + pair[1]);
+        lottoCoupon.innerHTML = pair[1];
+      }
+    </script>
+  </body>
+</html>

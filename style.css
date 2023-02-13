@@ -1,0 +1,429 @@
+@font-face {
+  font-family: "Brittany Signature";
+  src: url("fonts/BrittanySignature.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Brominates";
+  src: url("fonts/Brominates.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pink Valentine";
+  src: url("fonts/PinkValentine.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sweet Hearts";
+  src: url("fonts/SWEEHB__.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 150px;
+  background-color: #f4bac8;
+  line-height: 1.5;
+  overflow-y: hidden;
+}
+
+.content-width {
+  max-width: 70ch;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+}
+
+main {
+  margin-bottom: 4rem;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Brittany Signature";
+  color: #ce101d;
+}
+
+.stamp {
+  position: absolute;
+  z-index: 999;
+}
+
+#heart-title {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  z-index: 999;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  width: 35%;
+  top: 200px;
+}
+
+p {
+  font-family: "Roboto";
+  color: #fff;
+}
+
+a {
+  font-size: small;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: medium;
+}
+
+.heart {
+  /* animation: heartfade 4s linear; */
+  position: absolute;
+  opacity: 0.8;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #ce101d;
+  position: absolute;
+  height: 480px;
+  width: 720px;
+  border-radius: 240px 0px 0px 240px;
+}
+.heart:before {
+  left: -54px;
+  transform: rotate(45deg);
+}
+.heart:after {
+  left: 114px;
+  transform: rotate(135deg);
+}
+
+@keyframes heartfade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Coupon styling */
+.card {
+  width: 400px;
+  height: 180px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 10px 10px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.main,
+.copy-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+.card::after {
+  position: absolute;
+  content: "";
+  height: 40px;
+  right: -20px;
+  border-radius: 40px;
+  z-index: 1;
+  top: 80px;
+  background-color: #f4bac8;
+  width: 40px;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  left: -20px;
+  border-radius: 40px;
+  z-index: 1;
+  top: 80px;
+  background-color: #f4bac8;
+  width: 40px;
+}
+
+.co-img img {
+  width: 100px;
+  height: 100px;
+}
+.vertical {
+  border-left: 3px dashed #f4bac8;
+  height: 200px;
+  position: absolute;
+  left: 35%;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 25px;
+  margin-left: -20px;
+  color: #565656;
+}
+
+.content h1 span {
+  font-size: 18px;
+}
+.content h2 {
+  font-size: 16px;
+  margin-left: -20px;
+  color: #565656;
+  text-transform: uppercase;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.content p {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #696969;
+  margin-left: -20px;
+}
+
+#coupon-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+/* Scratchie */
+.lotto-container {
+  border: 3px solid #ce101d;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.lotto-container h2 {
+  font-family: "Brittany Signature";
+  color: #ce101d;
+  text-align: center;
+}
+
+.lotto-container h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: small;
+  font-family: "Roboto";
+  color: #ce101d;
+  padding-top: 25%;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+}
+
+/* Claw Machine Styling */
+#main {
+  position: relative;
+  margin: auto;
+  width: 360px;
+  height: 460px;
+  margin-top: 50px;
+}
+
+#next {
+  visibility: hidden;
+}
+
+#toys {
+  position: absolute;
+  top: 210px;
+  left: 102px;
+  width: 231px;
+  height: 121px;
+  background-image: url(img/toysBG.png);
+}
+.toy {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background-image: url(img/toys.png);
+  background-size: 350px 350px;
+  background-position: 0 0;
+}
+#moveContainer {
+  position: absolute;
+  top: 343px;
+  left: 102px;
+  width: 231px;
+  height: 36px;
+  background: #e19fae;
+  border: 2px solid #cf8092;
+  border-radius: 20px;
+}
+#moveControl {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 36px;
+  height: 36px;
+  background: #ce8898;
+  border: 2px solid #cf8092;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#claw {
+  position: absolute;
+  top: 65px;
+  left: 30px;
+  width: 60px;
+  height: 260px;
+}
+#clawBar {
+  position: absolute;
+  top: 20px;
+  left: 27px;
+  width: 6px;
+  height: 15px;
+  background: #f3c9d3;
+}
+#clawALL {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+}
+#clawBall {
+  position: absolute;
+  top: 31px;
+  left: 21px;
+  width: 6px;
+  height: 6px;
+  border: 6px solid #f9d8e0;
+  border-radius: 50%;
+}
+#leftClaw {
+  position: absolute;
+  top: 36px;
+  left: 3px;
+  width: 16px;
+  height: 25px;
+  border-top: 8px solid #f9d8e0;
+  border-left: 4px solid #f3c9d3;
+  transform-origin: top right;
+  transform: rotate(-30deg);
+}
+#rightClaw {
+  position: absolute;
+  top: 36px;
+  right: 3px;
+  width: 16px;
+  height: 25px;
+  border-top: 8px solid #f9d8e0;
+  border-right: 4px solid #f3c9d3;
+  transform-origin: top left;
+  transform: rotate(30deg);
+}
+#clawOpen {
+  transform: rotate(0deg);
+}
+@-webkit-keyframes fullsize {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(4) translate(30px, -30px);
+  }
+}
+
+/* Wheel styling */
+
+.wrapper {
+  width: 90%;
+  max-width: 24.37em;
+  max-height: 90vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+}
+.container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+}
+
+#wheel {
+  max-height: inherit;
+  width: inherit;
+  top: 0;
+  padding: 0;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#spin-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  background: radial-gradient(#cf8092 50%, #e19fae 85%);
+  color: #f3c9d3;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+#spinner-img {
+  position: absolute;
+  width: 4em;
+  top: 45%;
+  right: -8%;
+}
+#final-value {
+  font-size: 1em;
+  text-align: center;
+  margin-top: 2em;
+  color: #fff;
+  font-weight: 200;
+  font-family: "Roboto";
+  opacity: 0.8;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    font-size: 12px;
+  }
+  #spinner-img {
+    right: -5%;
+  }
+}

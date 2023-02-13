@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Valentines Mi Amor</title>
+    <link rel="icon" type="image/png" href="img/icons8-favorite-16.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body>
+    <h1 class="center center-text">Lucky in Love</h1>
+    <div
+      class="center"
+      style="display: flex; height: 100%; width: 60%; padding-top: 100px"
+    >
+      <div class="lotto-container" id="js-container">
+        <canvas class="canvas" id="js-canvas" width="250" height="250"></canvas>
+        <h3>You have won a</h3>
+        <h2>Cocktail Night</h2>
+        <a href="coupons.html?lottoCoupon=Cocktail+Night" style="width: 45%"
+          ><p class="center center-text">[ next ]</p></a
+        >
+      </div>
+      <div class="lotto-container" id="js-container-1">
+        <canvas
+          class="canvas"
+          id="js-canvas-1"
+          width="250"
+          height="250"
+        ></canvas>
+        <h3>You have won a</h3>
+        <h2>Romantic Dinner</h2>
+        <a href="coupons.html?lottoCoupon=Romantic+Dinner" style="width: 45%"
+          ><p class="center center-text">[ next ]</p></a
+        >
+      </div>
+      <div class="lotto-container" id="js-container-2">
+        <canvas
+          class="canvas"
+          id="js-canvas-2"
+          width="250"
+          height="250"
+        ></canvas>
+        <h3>You have won a</h3>
+        <h2>Date Night</h2>
+        <a href="coupons.html?lottoCoupon=Date+Night" style="width: 45%"
+          ><p class="center center-text">[ next ]</p></a
+        >
+      </div>
+    </div>
+    <div id="final-value">
+      <p>Scratch one of the boxes to win a prize</p>
+    </div>
+    <script src="lotto.js"></script>
+  </body>
+</html>
