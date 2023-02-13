@@ -4,21 +4,6 @@
 }
 
 @font-face {
-  font-family: "Brominates";
-  src: url("fonts/Brominates.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Pink Valentine";
-  src: url("fonts/PinkValentine.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Sweet Hearts";
-  src: url("fonts/SWEEHB__.TTF") format("truetype");
-}
-
-@font-face {
   font-family: "Roboto";
   src: url("fonts/Roboto-Regular.ttf") format("truetype");
 }
@@ -27,7 +12,6 @@ body {
   margin: 150px;
   background-color: #f4bac8;
   line-height: 1.5;
-  overflow-y: hidden;
 }
 
 .content-width {
@@ -61,15 +45,16 @@ h1 {
 }
 
 #heart-title {
-  font-size: 30px;
+  font-size: x-large;
   color: white;
-  position: absolute;
-  z-index: 999;
   text-align: center;
-  padding: 20px;
   margin: auto;
-  width: 35%;
-  top: 200px;
+}
+
+@media only screen and (max-width: 1700px) {
+  #heart-title {
+    top: 180px;
+  }
 }
 
 p {
@@ -88,7 +73,6 @@ a:hover {
 }
 
 .heart {
-  /* animation: heartfade 4s linear; */
   position: absolute;
   opacity: 0.8;
 }
@@ -108,15 +92,6 @@ a:hover {
 .heart:after {
   left: 114px;
   transform: rotate(135deg);
-}
-
-@keyframes heartfade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.8;
-  }
 }
 
 /* Coupon styling */
@@ -183,9 +158,6 @@ a:hover {
   color: #565656;
 }
 
-.content h1 span {
-  font-size: 18px;
-}
 .content h2 {
   font-size: 16px;
   margin-left: -20px;
@@ -206,6 +178,48 @@ a:hover {
   height: 100%;
   width: 100%;
   display: flex;
+}
+
+#mug-img {
+  height: 75px;
+  width: 75px;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 1700px) {
+  .vertical {
+    left: 40%;
+  }
+
+  .main {
+    height: 180px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .content h1 {
+    font-size: 20px;
+    margin-left: -10px;
+  }
+
+  .content h2 {
+    font-size: 11px;
+    margin-left: -10px;
+  }
+
+  .content p {
+    font-size: 9px;
+    margin-left: -20px;
+  }
+
+  #mug-img {
+    height: 70px;
+    width: 70px;
+    margin-left: 0px;
+  }
 }
 
 /* Scratchie */
@@ -249,6 +263,12 @@ a:hover {
   width: 360px;
   height: 460px;
   margin-top: 50px;
+}
+
+@media only screen and (max-width: 1700px) {
+  body {
+    margin: 75px;
+  }
 }
 
 #next {
@@ -374,6 +394,12 @@ a:hover {
   margin-top: 50px;
   position: relative;
   width: 100%;
+}
+
+@media only screen and (max-width: 1700px) {
+  .container {
+    margin-top: 20px;
+  }
 }
 
 #wheel {

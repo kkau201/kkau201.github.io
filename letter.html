@@ -8,22 +8,27 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
-  <body>
-    <img
-      class="stamp"
-      src="img/stamp.png"
-      style="width: 100px; left: 1100px; top: 200px"
-    />
-    <img
-      class="stamp"
-      src="img/heart-stamp.png"
-      style="width: 150px; left: 1150px; top: 300px"
-    />
+  <body style="margin: auto">
     <div class="center">
-      <!-- <img src="img/snoopy.jpg" style="height: 200px" /> -->
-      <div>
-        <h1 id="heart-title">Will you be my valentine?</h1>
-        <div class="heart center"></div>
+      <div
+        class="center"
+        style="height: 100%; z-index: 999; position: absolute; top: 22%"
+      >
+        <img
+          class="stamp"
+          src="img/heart-stamp.png"
+          style="width: 15%; float: right; position: relative"
+        />
+        <img
+          class="stamp"
+          src="img/stamp.png"
+          style="width: 10%; float: right; position: relative"
+        />
+
+        <h1 id="heart-title" class="center center-text">
+          Will you be my valentine?
+        </h1>
+        <!-- <div class="heart"></div> -->
         <!-- Gif -->
         <lottie-player
           class="center"
@@ -31,34 +36,30 @@
           background="transparent"
           speed="0.8"
           autoplay
-          style="width: 30%; padding-top: 150px; padding-right: 50px"
+          style="width: 30%; height: 30%"
         ></lottie-player>
-        <div
-          class="center"
-          style="display: flex; position: relative; z-index: 999; height: 50px"
-        >
-          <a href="claw-machine.html" style="width: 45%"
-            ><p class="center center-text">[ yes ]</p></a
+
+        <div class="center" style="display: flex; height: 50px">
+          <a href="claw-machine.html" style="width: 50%"
+            ><p class="center-text">[ yes ]</p></a
           >
-          <a href="index.html" style="width: 45%"
-            ><p class="center center-text">[ no ]</p></a
+          <a href="index.html" style="width: 50%"
+            ><p class="center-text">[ no ]</p></a
           >
         </div>
         <h1
           id="love-kayla"
           class="center-text"
-          style="
-            color: white;
-            position: relative;
-            z-index: 999;
-            font-size: large;
-            left: -20px;
-            padding-top: 30px;
-          "
+          style="color: white; font-size: large"
         >
           Love Kayla xx
         </h1>
       </div>
+      <img
+        class="center"
+        src="img/heart-431.svg"
+        style="height: 100%; z-index: 1; position: absolute"
+      />
     </div>
   </body>
 </html>
